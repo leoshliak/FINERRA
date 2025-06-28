@@ -334,6 +334,16 @@ nav a:hover { color: #fff; }
   color: #fff;
 }
 
+.waitlist-form input[type="email"]:-webkit-autofill,
+.waitlist-form input[type="email"]:-webkit-autofill:hover,
+.waitlist-form input[type="email"]:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  border: none;
+  outline: 1px solid #181a23;
+  -webkit-box-shadow: 0 0 0px 1000px #181a23 inset;
+}/**/
+
+
 .waitlist-form button {
   padding: 14px 28px;
   border: none;
@@ -405,6 +415,7 @@ footer {
   color: #555;
   margin-top: 0.25rem;
 }
+
 
 
 
