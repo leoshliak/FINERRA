@@ -168,6 +168,8 @@ function setLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
 
+  localStorage.setItem('selectedLanguage', lang);
+
   document.getElementById('home_nav').innerText = t.home_nav;
   document.getElementById('feature_nav').innerText = t.feature_nav;
   document.getElementById('how_it_works_nav').innerText = t.how_it_works_nav;
@@ -201,9 +203,11 @@ function setLanguage(lang) {
   document.getElementById('waitlist_des').innerText = t.waitlist_des;
   document.getElementById('join').innerText = t.join;
   document.getElementById('form_text').innerText = t.form_text;
-
-  document.getElementById('footer_con').innerText = t.footer_con;
-
+  if(lang === 'he') {
+  document.getElementById('footer_con').innerHTML = `נוצר עם <span class='heart'>♥</span> מאת FINERRA`
+  } else if(lang === 'en'){
+    document.getElementById('footer_con').innerHTML = `Made with <span class='heart'>♥</span> by FINERRA`
+  }
   document.getElementById('succes').innerText = t.succes;
   document.getElementById('succes_des').innerText = t.succes_des;
   
@@ -215,4 +219,5 @@ function setLanguage(lang) {
   }
 }
 
-
+const savedLang = localStorage.getItem('selectedLanguage') || 'he';
+setLanguage(savedLang);
