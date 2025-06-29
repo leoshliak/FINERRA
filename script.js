@@ -77,36 +77,36 @@ const translations = {
     cta: "קבל גישה מוקדמת",
     badge: "גישה מוקדמת זמינה 🚀",
     cta_main: "קבל גישה מוקדמת",
-    no_highlight: "נהל את הכסף שלך כמו מקצוען.",
-    highlight: "בעזרת בינה מלאכותית.",
+    no_highlight: "נהל את הכסף שלך כמו מקצוען",
+    highlight: "בעזרת בינה מלאכותית",
     placeholder_email: "הזן את כתובת האימייל שלך",
 
     features_title: "שנה את עתידך הכלכלי",
-    features_subtitle: "התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות המיועדות למשקיע המודרני.",
+    features_subtitle: "התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות המיועדות למשקיע המודרני",
 
     fa_title: "עוזר פיננסי מבוסס בינה מלאכותית",
-    fa_description: "קבל תובנות והמלצות אישיות המונעות על ידי בינה מלאכותית מתקדמת כדי למקסם את ההוצאות והחסכונות שלך.",
+    fa_description: "קבל תובנות והמלצות אישיות המונעות על ידי בינה מלאכותית מתקדמת כדי למקסם את ההוצאות והחסכונות שלך",
 
     sid_title: "חלוקה חכמה של ההכנסות",
-    sid_description: "הקצא אוטומטית את ההכנסות שלך לחסכונות, השקעות והוצאות בהתבסס על המטרות הפיננסיות שלך.",
+    sid_description: "הקצא אוטומטית את ההכנסות שלך לחסכונות, השקעות והוצאות בהתבסס על המטרות הפיננסיות שלך",
 
     gc_title: "אתגרי גיימיפיקציה",
-    gc_description: "הישאר ממוטב עם אתגרים פיננסיים מרתקים ותגמולים שהופכים את בניית העושר לכיפית וממכרת.",
+    gc_description: "הישאר ממוטב עם אתגרים פיננסיים מרתקים ותגמולים שהופכים את בניית העושר לכיפית וממכרת",
 
     steps_title: "צעדים פשוטים לחופש כלכלי",
     steps_des: "התחל תוך דקות, לא שעות",
 
     step1_title: "חבר את החשבונות שלך",
-    step1_des: "קישור מאובטח של חשבונות הבנק וכרטיסי האשראי בכמה לחיצות בלבד.",
+    step1_des: "קישור מאובטח של חשבונות הבנק וכרטיסי האשראי בכמה לחיצות בלבד",
 
     step2_title: "קבע את המטרות שלך",
-    step2_des: "ספר לבינה המלאכותית שלנו על היעדים הפיננסיים שלך ותן לה ליצור תוכנית מותאמת אישית.",
+    step2_des: "ספר לבינה המלאכותית שלנו על היעדים הפיננסיים שלך ותן לה ליצור תוכנית מותאמת אישית",
 
     step3_title: "צפה בעושר שלך גדל",
-    step3_des: "תשב בנוח ותן ל-FINERRA לאופטימיזציה אוטומטית של הכספים שלך.",
+    step3_des: "תשב בנוח ותן ל-FINERRA לאופטימיזציה אוטומטית של הכספים שלך",
 
     waitlist_title: "מוכנים לשנות את המצב הכלכלי שלכם?",
-    waitlist_des: "הצטרפו לאלפי משקיעים חכמים שכבר ברשימת ההמתנה.",
+    waitlist_des: "הצטרפו לאלפי משקיעים חכמים שכבר ברשימת ההמתנה",
     join: "הצטרף לרשימת ההמתנה",
     form_text: "הצטרפו לתנועת הכסף החכם. קבלו גישה מוקדמת בלעדית לעוזר הפיננסי מבוסס הבינה המלאכותית שישנה את הדרך שבה אתם מנהלים את העושר שלכם.",
 
@@ -123,36 +123,36 @@ const translations = {
     cta: "Get Early Access",
     badge: "🚀 Early Access Available",
     cta_main: "Get Early Access",
-    no_highlight: "Manage your money like a pro.",
-    highlight: "With AI.",
+    no_highlight: "Manage your money like a pro",
+    highlight: "With AI",
     placeholder_email: "Enter your email address",
 
     features_title: "Transform your financial future",
-    features_subtitle: "Experience the power of AI-driven financial management with features designed for the modern investor.",
+    features_subtitle: "Experience the power of AI-driven financial management with features designed for the modern investor",
 
     fa_title: "AI Financial Assistant",
-    fa_description: "Get personalized insights and recommendations powered by advanced AI to optimize your spending and savings.",
+    fa_description: "Get personalized insights and recommendations powered by advanced AI to optimize your spending and savings",
 
     sid_title: "Smart Income Distribution",
-    sid_description: "Automatically allocate your income across savings, investments, and expenses based on your financial goals.",
+    sid_description: "Automatically allocate your income across savings, investments, and expenses based on your financial goals",
 
     gc_title: "Gamified Challenges",
-    gc_description: "Stay motivated with engaging financial challenges and rewards that make building wealth fun and addictive.",
+    gc_description: "Stay motivated with engaging financial challenges and rewards that make building wealth fun and addictive",
 
     steps_title: "Simple steps to financial freedom",
     steps_des: "Get started in minutes, not hours",
 
     step1_title: "Connect Your Accounts",
-    step1_des: "Securely link your bank accounts and credit cards in just a few clicks.",
+    step1_des: "Securely link your bank accounts and credit cards in just a few clicks",
 
     step2_title: "Set Your Goals",
-    step2_des: "Tell our AI about your financial objectives and let it create a personalized plan.",
+    step2_des: "Tell our AI about your financial objectives and let it create a personalized plan",
 
     step3_title: "Watch Your Wealth Grow",
-    step3_des: "Sit back and let FINERRA optimize your finances automatically.",
+    step3_des: "Sit back and let FINERRA optimize your finances automatically",
 
     waitlist_title: "Ready to transform your finances?",
-    waitlist_des: "Join thousands of smart investors who are already on the waitlist.",
+    waitlist_des: "Join thousands of smart investors who are already on the waitlist",
     join: "Join Waitlist",
     form_text: "Join the smart money movement. Get exclusive early access to the AI powered financial assistant that will change how you manage your wealth.",
 
@@ -214,9 +214,10 @@ function setLanguage(lang) {
   document.querySelectorAll('.l-button').forEach(button => button.classList.remove("active"))
   if(lang === 'he') {
     document.querySelector('#he').classList.add('active');
-  } else if(lang === 'en'){
+  } else if(lang === 'en') {
     document.querySelector('#en').classList.add('active');
   }
+  
 }
 
 const savedLang = localStorage.getItem('selectedLanguage') || 'he';
