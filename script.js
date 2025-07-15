@@ -24,6 +24,7 @@ waitlistForm.addEventListener('submit', async function(e) {
       toast.classList.remove('hidden');
       requestAnimationFrame(() => toast.classList.add('show'));
       hideTimeout = setTimeout(hideToast, 3000);
+      fbq('track', 'Lead');
       waitlistForm.reset();
     } else {
       alert('Oops! Something went wrong. Please try again.');
