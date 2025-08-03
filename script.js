@@ -80,7 +80,10 @@ const translations = {
     cta_main: "קבל גישה מוקדמת",
     no_highlight: "נהל את הכסף שלך כמו מקצוען",
     highlight: "בעזרת בינה מלאכותית",
+    chaos_to_control: "נהל את הכסף שלך כמו מקצוען",
     placeholder_email: "הזן את כתובת האימייל שלך",
+
+    partners_title: "מהימן על ידי חברות מובילות",
 
     features_title: "שנה את עתידך הכלכלי",
     features_subtitle: "התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות המיועדות למשקיע המודרני",
@@ -114,7 +117,15 @@ const translations = {
     footer_con: "נוצר עם ♥ מאת FINERRA",
 
     succes: "הצלחה!",
-    succes_des: "תודה שהצטרפת לרשימת הגישה המוקדמת שלנו. נחזור אליך בקרוב!"
+    succes_des: "תודה שהצטרפת לרשימת הגישה המוקדמת שלנו. נחזור אליך בקרוב!",
+
+    // Trust section translations
+    privacy_security_title: "פרטיות ואבטחה",
+    data_protection_text: "הנתונים שלך מוגנים ברמה הגבוהה ביותר",
+    trusted_by_title: "מהימן על ידי",
+    beta_testimonial_1: "שינה לי את הדרך שבה אני מנהל כסף",
+    beta_testimonial_2: "סוף סוף יש לי שליטה על התקציב שלי",
+    beta_user: "משתמש בטא"
   },
 
   en: {
@@ -126,7 +137,10 @@ const translations = {
     cta_main: "Get Early Access",
     no_highlight: "Manage your money like a pro",
     highlight: "With AI",
+    chaos_to_control: "Manage your money like a pro",
     placeholder_email: "Enter your email address",
+
+    partners_title: "Trusted by leading companies",
 
     features_title: "Transform your financial future",
     features_subtitle: "Experience the power of AI-driven financial management with features designed for the modern investor",
@@ -160,7 +174,15 @@ const translations = {
     footer_con: "Made with ♥ by FINERRA",
 
     succes: "Success!",
-    succes_des: "Thank you for joining our early access list. We'll be in touch soon!"
+    succes_des: "Thank you for joining our early access list. We'll be in touch soon!",
+
+    // Trust section translations
+    privacy_security_title: "Privacy & Security",
+    data_protection_text: "Your data is protected at the highest level",
+    trusted_by_title: "Trusted by",
+    beta_testimonial_1: "Changed how I manage my money",
+    beta_testimonial_2: "Finally have control over my budget",
+    beta_user: "Beta User"
   }
 };
 
@@ -177,9 +199,12 @@ function setLanguage(lang) {
   document.getElementById('cta').innerText = t.cta;
   document.getElementById('badge').innerText = t.badge;
   document.getElementById('cta_main').innerText = t.cta_main;
+  document.getElementById('motivating_headline').innerText = t.chaos_to_control;
   document.getElementById('no_highlight').innerText = t.no_highlight;
   document.querySelector('.highlight').innerText = t.highlight;
   document.getElementById('email').placeholder = t.placeholder_email;
+
+  document.getElementById('partners_title').innerText = t.partners_title;
 
   document.getElementById('features_title').innerText = t.features_title;
   document.getElementById('features_subtitle').innerText = t.features_subtitle;
@@ -211,6 +236,28 @@ function setLanguage(lang) {
   }
   document.getElementById('succes').innerText = t.succes;
   document.getElementById('succes_des').innerText = t.succes_des;
+
+  // Trust section translations (only if elements exist)
+  const privacyTitle = document.getElementById('privacy_security_title');
+  if (privacyTitle) privacyTitle.innerText = t.privacy_security_title;
+  
+  const dataProtection = document.getElementById('data_protection_text');
+  if (dataProtection) dataProtection.innerText = t.data_protection_text;
+  
+  const trustedBy = document.getElementById('trusted_by_title');
+  if (trustedBy) trustedBy.innerText = t.trusted_by_title;
+  
+  const testimonial1 = document.getElementById('beta_testimonial_1');
+  if (testimonial1) testimonial1.innerText = t.beta_testimonial_1;
+  
+  const testimonial2 = document.getElementById('beta_testimonial_2');
+  if (testimonial2) testimonial2.innerText = t.beta_testimonial_2;
+  
+  const betaUser1 = document.getElementById('beta_user_1');
+  if (betaUser1) betaUser1.innerText = t.beta_user;
+  
+  const betaUser2 = document.getElementById('beta_user_2');
+  if (betaUser2) betaUser2.innerText = t.beta_user;
   
   document.querySelectorAll('.l-button').forEach(button => button.classList.remove("active"))
   if(lang === 'he') {
