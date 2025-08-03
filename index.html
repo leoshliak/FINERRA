@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FINERRA</title>
   <!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '1045281164462985'); 
-fbq('track', 'PageView');
-</script>
-<noscript>
- <img height="1" width="1" 
-src="https://www.facebook.com/tr?id=1045281164462985&ev=PageView
-&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1045281164462985');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=1045281164462985&ev=PageView
+&noscript=1" />
+  </noscript>
+  <!-- End Facebook Pixel Code -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <div class="nav-container">
       <div class="logo">FINERRA</div>
       <nav id="nav">
         <div class="links">
-        <a id="home_nav" href="#hero">בית</a>
-        <a id="feature_nav" href="#features">תכונות</a>
-        <a id="how_it_works_nav" href="#how-it-works">איך זה עובד</a>
+          <a id="home_nav" href="#hero">בית</a>
+          <a id="feature_nav" href="#features">תכונות</a>
+          <a id="how_it_works_nav" href="#how-it-works">איך זה עובד</a>
         </div>
         <div class="rest">
-        <div class="lang-switch">
-          <button id="lang-btn"><img src="images/translater.png" alt=""></button>
-          <div class="lang-menu hidden">
-            <button id="he" class="l-button" onclick="setLanguage('he')">עברית</button>
-            <button id="en" class="l-button" onclick="setLanguage('en')">English</button>
+          <div class="lang-switch">
+            <button id="lang-btn"><img src="images/translater.png" alt=""></button>
+            <div class="lang-menu hidden">
+              <button id="he" class="l-button" onclick="setLanguage('he')">עברית</button>
+              <button id="en" class="l-button" onclick="setLanguage('en')">English</button>
+            </div>
           </div>
+          <a href="#waitlist" id="cta" class="cta-nav">קבל גישה מוקדמת</a>
         </div>
-        <a href="#waitlist" id="cta" class="cta-nav">קבל גישה מוקדמת</a>
-      </div>
       </nav>
       <div class="menu-icon" role="button" aria-label="menu"><span></span></div>
     </div>
@@ -52,35 +56,163 @@ src="https://www.facebook.com/tr?id=1045281164462985&ev=PageView
   <main>
     <section class="hero" id="hero">
       <div class="container hero-content">
-        <span id="badge" class="badge">גישה מוקדמת זמינה 🚀</span>
-        <h1 id="hero_title">FINERRA</h1>
-        <p id="hero_subtitle" class="subtitle"><span id="no_highlight">נהל את הכסף שלך כמו מקצוען</span><br><span class="highlight">בעזרת בינה מלאכותית.</span></p>
-        <a id="cta_main" href="#waitlist" class="cta-main">קבל גישה מוקדמת</a>
+        <div class="hero-text">
+          <span id="badge" class="badge">גישה מוקדמת זמינה 🚀</span>
+          <h1 id="hero_title">FINERRA</h1>
+          <h2 id="motivating_headline" class="motivating-headline" style="display: none;"></h2>
+          <p id="hero_subtitle" class="subtitle"><span id="no_highlight">נהל את הכסף שלך כמו מקצוען</span><br><span
+              class="highlight">בעזרת בינה מלאכותית.</span></p>
+          <a id="cta_main" href="#waitlist" class="cta-main">קבל גישה מוקדמת</a>
+        </div>
+        <div class="hero-visual">
+          <div class="iphone-mockup">
+            <img src="images/mockup.png" class="iphone-frame" alt="iPhone Frame">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners-section">
+      <div class="container">
+        <h3 id="partners_title" class="partners-title">מהימן על ידי חברות מובילות</h3>
+        <div class="partners-slider">
+          <div class="partners-track">
+            <div class="partner-logo">
+              <img src="/images/logoipsum-317.svg" alt="">
+            </div>
+            <div class="partner-logo">
+             <img src="/images/logoipsum-311.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/logoipsum-custom-logo.svg" alt="">
+            </div>
+            <div class="partner-logo">
+             <img src="/images/hiperlogic.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/politron.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/solarmeta.svg" alt="">
+            </div>
+            <!-- Duplicate logos for seamless loop -->
+            <div class="partner-logo">
+              <img src="/images/logoipsum-317.svg" alt="">
+            </div>
+            <div class="partner-logo">
+             <img src="/images/logoipsum-311.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/logoipsum-custom-logo.svg" alt="">
+            </div>
+            <div class="partner-logo">
+             <img src="/images/hiperlogic.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/politron.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/solarmeta.svg" alt="">
+            </div>
+            <!-- Duplicate logos for seamless loop -->
+            <div class="partner-logo">
+              <img src="/images/logoipsum-317.svg" alt="">
+            </div>
+            <div class="partner-logo">
+             <img src="/images/logoipsum-311.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/logoipsum-custom-logo.svg" alt="">
+            </div>
+            <div class="partner-logo">
+             <img src="/images/hiperlogic.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/politron.svg" alt="">
+            </div>
+            <div class="partner-logo">
+              <img src="/images/solarmeta.svg" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="features" id="features">
       <div class="container">
         <h2 id="features_title">שנה את עתידך הכלכלי</h2>
-        <p id="features_subtitle" class="section-desc">התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות המיועדות למשקיע המודרני</p>
+        <p id="features_subtitle" class="section-desc">התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות
+          המיועדות למשקיע המודרני</p>
         <div class="feature-cards">
           <div class="feature-card">
             <div class="icon icon-ai"><img src="images/ai.png" width="60%" height="60%" alt=ai""></div>
             <h3 id="fa_title">עוזר פיננסי מבוסס בינה מלאכותית</h3>
-            <p id="fa_description">קבל תובנות והמלצות אישיות המונעות על ידי בינה מלאכותית מתקדמת כדי למקסם את ההוצאות והחסכונות שלך</p>
+            <p id="fa_description">קבל תובנות והמלצות אישיות המונעות על ידי בינה מלאכותית מתקדמת כדי למקסם את ההוצאות
+              והחסכונות שלך</p>
           </div>
           <div class="feature-card">
             <div class="icon icon-income"><img src="images/income.png" width="60%" height="60%" alt="income"></div>
             <h3 id="sid_title">חלוקה חכמה של ההכנסות</h3>
-            <p id="sid_description">הקצא אוטומטית את ההכנסות שלך לחסכונות, השקעות והוצאות בהתבסס על המטרות הפיננסיות שלך</p>
+            <p id="sid_description">הקצא אוטומטית את ההכנסות שלך לחסכונות, השקעות והוצאות בהתבסס על המטרות הפיננסיות שלך
+            </p>
           </div>
           <div class="feature-card">
             <div class="icon icon-gamified"><img src="images/game.png" width="60%" height="60%" alt="game"></div>
             <h3 id="gc_title">אתגרי גיימיפיקציה</h3>
-            <p id="gc_description">הישאר ממוטב עם אתגרים פיננסיים מרתקים ותגמולים שהופכים את בניית העושר לכיפית וממכרת</p>
+            <p id="gc_description">הישאר ממוטב עם אתגרים פיננסיים מרתקים ותגמולים שהופכים את בניית העושר לכיפית וממכרת
+            </p>
           </div>
         </div>
       </div>
     </section>
+    <!-- <section class="trust-section">
+      <div class="container">
+        <div class="trust-elements">
+          <div class="security-info">
+            <div class="security-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#6c47ff" stroke-width="2" fill="none"/>
+                <path d="M9 12L11 14L15 10" stroke="#6c47ff" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <h3 id="privacy_security_title">פרטיות ואבטחה</h3>
+            <p id="data_protection_text">הנתונים שלך מוגנים ברמה הגבוהה ביותר</p>
+          </div>
+          <div class="partner-logos">
+            <h4 id="trusted_by_title">מהימן על ידי</h4>
+            <div class="logos-grid">
+              <div class="logo-placeholder">
+                <div class="placeholder-text">Partner Logo</div>
+              </div>
+              <div class="logo-placeholder">
+                <div class="placeholder-text">Partner Logo</div>
+              </div>
+              <div class="logo-placeholder">
+                <div class="placeholder-text">Partner Logo</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p id="beta_testimonial_1">"שינה לי את הדרך שבה אני מנהל כסף"</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar"></div>
+                  <span id="beta_user_1" class="author-name">משתמש בטא</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p id="beta_testimonial_2">"סוף סוף יש לי שליטה על התקציב שלי"</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar"></div>
+                  <span id="beta_user_2" class="author-name">משתמש בטא</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
     <section class="steps" id="how-it-works">
       <div class="container">
         <h2 id="steps_title">צעדים פשוטים לחופש כלכלי</h2>
@@ -115,12 +247,13 @@ src="https://www.facebook.com/tr?id=1045281164462985&ev=PageView
         <h2 id="waitlist_title">מוכנים לשנות את המצב הכלכלי שלכם?</h2>
         <p id="waitlist_des" class="section-desc">הצטרפו לאלפי משקיעים חכמים שכבר ברשימת ההמתנה</p>
         <div class="form-con">
-        <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mnnvlvek" method="POST">
-          <input type="text" name="_gotcha" style="display:none">
-          <input type="email" id="email" name="email" placeholder="הזן את כתובת האימייל שלך" required>
-          <button id="join" type="submit">הצטרף לרשימת ההמתנה</button>
-        </form>
-        <p id="form_text" class="form-note">הצטרפו לתנועת הכסף החכם. קבלו גישה מוקדמת בלעדית לעוזר הפיננסי מבוסס הבינה המלאכותית שישנה את הדרך שבה אתם מנהלים את העושר שלכם.</p>
+          <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mnnvlvek" method="POST">
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="email" id="email" name="email" placeholder="הזן את כתובת האימייל שלך" required>
+            <button id="join" type="submit">הצטרף לרשימת ההמתנה</button>
+          </form>
+          <p id="form_text" class="form-note">הצטרפו לתנועת הכסף החכם. קבלו גישה מוקדמת בלעדית לעוזר הפיננסי מבוסס הבינה
+            המלאכותית שישנה את הדרך שבה אתם מנהלים את העושר שלכם.</p>
         </div>
       </div>
     </section>
@@ -139,4 +272,5 @@ src="https://www.facebook.com/tr?id=1045281164462985&ev=PageView
   </div>
   <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
