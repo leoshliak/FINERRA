@@ -75,6 +75,7 @@ const translations = {
     home_nav: "בית",
     feature_nav: "תכונות", 
     how_it_works_nav: "איך זה עובד",
+    testimonials_nav: "ביקורות",
     cta: "קבל גישה מוקדמת",
     badge: "גישה מוקדמת זמינה 🚀",
     cta_main: "קבל גישה מוקדמת",
@@ -96,6 +97,45 @@ const translations = {
 
     gc_title: "אתגרי גיימיפיקציה",
     gc_description: "הישאר ממוטב עם אתגרים פיננסיים מרתקים ותגמולים שהופכים את בניית העושר לכיפית וממכרת",
+
+    testimonials_title: "מה אומרים משתמשי הגישה המוקדמת",
+    testimonials_subtitle: "חוות דעת אמיתיות ממשתמשים שכבר חווים את כוח הבינה המלאכותית של FINERRA",
+
+    testimonial_1: "FINERRA שינתה לחלוטין את הדרך שבה אני מנהל את הכספים שלי. הבינה המלאכותית מזהה דפוסי הוצאה שלא שמתי לב אליהם.",
+    author_1_name: "דני כהן",
+    author_1_title: "יזם טכנולוגיה",
+
+    testimonial_2: "סוף סוף יש לי שליטה מלאה על התקציב שלי. המערכת מציעה המלצות מדויקות שחוסכות לי אלפי שקלים בחודש.",
+    author_2_name: "מיכל לוי",
+    author_2_title: "מנהלת שיווק",
+
+    testimonial_3: "האפליקציה הפכה את ניהול הכספים לפשוט ומהנה. הגיימיפיקציה מעודדת אותי להמשיך לחסוך.",
+    author_3_name: "אבי רוזן",
+    author_3_title: "מהנדס תוכנה",
+
+    testimonial_4: "התובנות שהבינה המלאכותית מספקת פשוט מדהימות. זה כמו יועץ פיננסי אישי זמין 24/7.",
+    author_4_name: "שרה גולד",
+    author_4_title: "רופאה",
+
+    testimonial_5: "הצלחתי לחסוך 30% יותר מהרגיל הודות להמלצות החכמות של המערכת. פשוט מדהים!",
+    author_5_name: "יוסי אברהם",
+    author_5_title: "עורך דין",
+
+    testimonial_6: "המערכת עזרה לי להבין לאן הולך הכסף שלי ואיך לנהל אותו בצורה חכמה יותר.",
+    author_6_name: "רונית שמיר",
+    author_6_title: "מעצבת גרפית",
+
+    testimonial_7: "הממשק פשוט ונוח, והתכונות החכמות עוזרות לי לקבל החלטות פיננסיות מושכלות.",
+    author_7_name: "עמית בן דוד",
+    author_7_title: "אדריכל",
+
+    testimonial_8: "לראשונה בחיים אני מרגישה בטוחה לגבי העתיד הפיננסי שלי. תודה FINERRA!",
+    author_8_name: "נועה כץ",
+    author_8_title: "מורה",
+
+    testimonial_9: "המערכת לא רק עוזרת לי לחסוך, אלא גם מלמדת אותי איך להשקיע בחכמה.",
+    author_9_name: "גיל מורן",
+    author_9_title: "יועץ עסקי",
 
     steps_title: "צעדים פשוטים לחופש כלכלי",
     steps_des: "התחל תוך דקות, לא שעות",
@@ -132,6 +172,7 @@ const translations = {
     home_nav: "Home",
     feature_nav: "Features",
     how_it_works_nav: "How it Works",
+    testimonials_nav: "Testimonials",
     cta: "Get Early Access",
     badge: "🚀 Early Access Available",
     cta_main: "Get Early Access",
@@ -153,6 +194,45 @@ const translations = {
 
     gc_title: "Gamified Challenges",
     gc_description: "Stay motivated with engaging financial challenges and rewards that make building wealth fun and addictive",
+
+    testimonials_title: "What Early Access Users Say",
+    testimonials_subtitle: "Real testimonials from users already experiencing the power of FINERRA's AI",
+
+    testimonial_1: "FINERRA completely changed how I manage my finances. The AI identifies spending patterns I never noticed before.",
+    author_1_name: "Danny Cohen",
+    author_1_title: "Tech Entrepreneur",
+
+    testimonial_2: "Finally have complete control over my budget. The system offers precise recommendations that save me thousands monthly.",
+    author_2_name: "Michelle Levy",
+    author_2_title: "Marketing Manager",
+
+    testimonial_3: "The app made financial management simple and enjoyable. The gamification keeps me motivated to save more.",
+    author_3_name: "Avi Rosen",
+    author_3_title: "Software Engineer",
+
+    testimonial_4: "The insights the AI provides are simply amazing. It's like having a personal financial advisor available 24/7.",
+    author_4_name: "Sarah Gold",
+    author_4_title: "Doctor",
+
+    testimonial_5: "I managed to save 30% more than usual thanks to the system's smart recommendations. Simply amazing!",
+    author_5_name: "Joe Abraham",
+    author_5_title: "Lawyer",
+
+    testimonial_6: "The system helped me understand where my money goes and how to manage it more wisely.",
+    author_6_name: "Ronit Shamir",
+    author_6_title: "Graphic Designer",
+
+    testimonial_7: "The interface is simple and convenient, and the smart features help me make informed financial decisions.",
+    author_7_name: "Amit Ben David",
+    author_7_title: "Architect",
+
+    testimonial_8: "For the first time in my life, I feel confident about my financial future. Thank you FINERRA!",
+    author_8_name: "Noa Katz",
+    author_8_title: "Teacher",
+
+    testimonial_9: "The system doesn't just help me save, it also teaches me how to invest wisely.",
+    author_9_name: "Gil Moran",
+    author_9_title: "Business Consultant",
 
     steps_title: "Simple steps to financial freedom",
     steps_des: "Get started in minutes, not hours",
@@ -196,6 +276,7 @@ function setLanguage(lang) {
   document.getElementById('home_nav').innerText = t.home_nav;
   document.getElementById('feature_nav').innerText = t.feature_nav;
   document.getElementById('how_it_works_nav').innerText = t.how_it_works_nav;
+  document.getElementById('testimonials_nav').innerText = t.testimonials_nav;
   document.getElementById('cta').innerText = t.cta;
   document.getElementById('badge').innerText = t.badge;
   document.getElementById('cta_main').innerText = t.cta_main;
@@ -215,6 +296,16 @@ function setLanguage(lang) {
   document.getElementById('sid_description').innerText = t.sid_description;
   document.getElementById('gc_title').innerText = t.gc_title;
   document.getElementById('gc_description').innerText = t.gc_description;
+
+  // Testimonials section translations
+  document.getElementById('testimonials_title').innerText = t.testimonials_title;
+  document.getElementById('testimonials_subtitle').innerText = t.testimonials_subtitle;
+
+  // Individual testimonials
+  for (let i = 1; i <= 9; i++) {
+    document.getElementById(`testimonial_${i}`).innerText = t[`testimonial_${i}`];
+    document.getElementById(`author_${i}_name`).innerText = t[`author_${i}_name`];
+  }
 
   document.getElementById('steps_title').innerText = t.steps_title;
   document.getElementById('steps_des').innerText = t.steps_des;
@@ -270,3 +361,64 @@ function setLanguage(lang) {
 
 const savedLang = localStorage.getItem('selectedLanguage') || 'he';
 setLanguage(savedLang);
+
+// Testimonials slider functionality
+let currentTestimonialPage = 0;
+const testimonialsTrack = document.getElementById('testimonials-track');
+const testimonialPrev = document.getElementById('testimonial-prev');
+const testimonialNext = document.getElementById('testimonial-next');
+const totalTestimonials = 9;
+
+function getTestimonialsPerView() {
+  if (window.innerWidth <= 850) return 1; // Mobile: 1 testimonial
+  if (window.innerWidth <= 1250) return 2; // Tablet: 2 testimonials
+  return 3; // Desktop: 3 testimonials
+}
+
+function getTotalPages() {
+  const testimonialsPerView = getTestimonialsPerView();
+  return Math.ceil(totalTestimonials / testimonialsPerView);
+}
+
+function updateTestimonialsSlider() {
+  const totalPages = getTotalPages();
+  
+  // Ensure current page doesn't exceed max
+  if (currentTestimonialPage >= totalPages) {
+    currentTestimonialPage = totalPages - 1;
+  }
+  
+  // Move by full container width for each page
+  const movePercentage = currentTestimonialPage * 100;
+  testimonialsTrack.style.transform = `translateX(-${movePercentage}%)`;
+  
+  // Update button states
+  testimonialPrev.disabled = currentTestimonialPage === 0;
+  testimonialNext.disabled = currentTestimonialPage >= totalPages - 1;
+}
+
+testimonialPrev.addEventListener('click', () => {
+  if (currentTestimonialPage > 0) {
+    currentTestimonialPage--;
+    updateTestimonialsSlider();
+  }
+});
+
+testimonialNext.addEventListener('click', () => {
+  const totalPages = getTotalPages();
+  
+  if (currentTestimonialPage < totalPages - 1) {
+    currentTestimonialPage++;
+    updateTestimonialsSlider();
+  }
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+  // Reset to first page on resize to avoid positioning issues
+  currentTestimonialPage = 0;
+  updateTestimonialsSlider();
+});
+
+// Initialize testimonials slider
+updateTestimonialsSlider();
