@@ -149,6 +149,18 @@ const translations = {
     step3_title: "צפה בעושר שלך גדל",
     step3_des: "תשב בנוח ותן ל-FINERRA לאופטימיזציה אוטומטית של הכספים שלך",
 
+    info_title: "למה לבחור בנו",
+    info_subtitle: "גלה מה הופך את FINERRA לבחירה הטובה ביותר לניהול הכספים שלך",
+
+    security_title: "אבטחת מידע מתקדמת",
+    security_description: "הנתונים הפיננסיים שלך מוגנים בהצפנה ברמה בנקאית ובטכנולוגיות אבטחה מתקדמות. אנחנו מבטיחים שהמידע שלך יישאר פרטי ומאובטח תמיד.",
+
+    ai_assistant_title: "עוזר פיננסי מבוסס בינה מלאכותית",
+    ai_assistant_description: "הבינה המלאכותית שלנו לומדת את ההרגלים הפיננסיים שלך ומספקת המלצות מותאמות אישית. קבל תובנות חכמות שיעזרו לך לחסוך יותר ולהשקיע בחכמה.",
+
+    free_access_title: "חודש מלא של גישה חינמית",
+    free_access_description: "נסה את כל התכונות של FINERRA במשך חודש שלם ללא עלות. הצטרף לרשימת ההמתנה עכשיו כדי להיות הראשון לקבל גישה לחודש החינמי שלך!",
+
     waitlist_title: "מוכנים לשנות את המצב הכלכלי שלכם?",
     waitlist_des: "הצטרפו לאלפי משקיעים חכמים שכבר ברשימת ההמתנה",
     join: "הצטרף לרשימת ההמתנה",
@@ -246,6 +258,18 @@ const translations = {
     step3_title: "Watch Your Wealth Grow",
     step3_des: "Sit back and let FINERRA optimize your finances automatically",
 
+    info_title: "Why Choose Us",
+    info_subtitle: "Discover what makes FINERRA the best choice for managing your finances",
+
+    security_title: "Advanced Data Security",
+    security_description: "Your financial data is protected with bank-level encryption and advanced security technologies. We guarantee your information stays private and secure at all times.",
+
+    ai_assistant_title: "AI-Powered Finance Assistant",
+    ai_assistant_description: "Our AI learns your financial habits and provides personalized recommendations. Get smart insights that help you save more and invest wisely.",
+
+    free_access_title: "1 Month of Full Free Access",
+    free_access_description: "Try all FINERRA features for a full month at no cost. Join the waitlist now to be first in line for your free month!",
+
     waitlist_title: "Ready to transform your finances?",
     waitlist_des: "Join thousands of smart investors who are already on the waitlist",
     join: "Join Waitlist",
@@ -315,6 +339,16 @@ function setLanguage(lang) {
   document.getElementById('2_des').innerText = t.step2_des;
   document.getElementById('3_title').innerText = t.step3_title;
   document.getElementById('3_des').innerText = t.step3_des;
+
+  // Info section translations
+  document.getElementById('info_title').innerText = t.info_title;
+  document.getElementById('info_subtitle').innerText = t.info_subtitle;
+  document.getElementById('security_title').innerText = t.security_title;
+  document.getElementById('security_description').innerText = t.security_description;
+  document.getElementById('ai_assistant_title').innerText = t.ai_assistant_title;
+  document.getElementById('ai_assistant_description').innerText = t.ai_assistant_description;
+  document.getElementById('free_access_title').innerText = t.free_access_title;
+  document.getElementById('free_access_description').innerText = t.free_access_description;
 
   document.getElementById('waitlist_title').innerText = t.waitlist_title;
   document.getElementById('waitlist_des').innerText = t.waitlist_des;
