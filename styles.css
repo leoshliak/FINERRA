@@ -207,6 +207,7 @@ nav a:hover {
   align-items: flex-start;
   text-align: left;
   position: relative;
+  z-index: 99;
 }
 
 .hero-text::before {
