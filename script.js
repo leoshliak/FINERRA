@@ -88,7 +88,7 @@ const translations = {
 
     partners_title: "מהימן על ידי חברות מובילות",
 
-    features_title: "שנה את עתידך הכלכלי",
+    features_title: "להפוך את הכאוס הפיננסי לשליטה",
     features_subtitle: "התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות המיועדות למשקיע המודרני",
 
     fa_title: "עוזר פיננסי מבוסס בינה מלאכותית",
@@ -163,6 +163,19 @@ const translations = {
     free_access_title: "חודש מלא של גישה חינמית",
     free_access_description: "נסה את כל התכונות של FINERRA במשך חודש שלם ללא עלות. הצטרף לרשימת ההמתנה עכשיו כדי להיות הראשון לקבל גישה לחודש החינמי שלך!",
 
+    // Free trial section translations
+    free_trial_title: "חודש מלא של גישה חינמית - מה תקבל?",
+    free_trial_subtitle: "גישה מוקדמת בלעדית למספר מוגבל של משתמשים",
+    ai_analysis_title: "ניתוח AI של הוצאות",
+    ai_analysis_desc: "הבינה המלאכותית שלנו תנתח את כל ההוצאות שלך ותזהה דפוסים חבויים שיעזרו לך לחסוך",
+    auto_distribution_title: "חלוקה אוטומטית של הכנסות",
+    auto_distribution_desc: "המערכת תחלק אוטומטית את ההכנסות שלך בין חסכונות, השקעות והוצאות יומיות",
+    insights_title: "תובנות פיננסיות מתקדמות",
+    insights_desc: "קבל המלצות מותאמות אישית ותחזיות לעתיד הפיננסי שלך",
+    limited_users: "מוגבל למספר משתמשים",
+    early_access_text: "זוהי גישה מוקדמת בלעדית למספר מוגבל של משתמשים בלבד!",
+    get_access_cta: "השאר את האימייל שלך וקבל גישה",
+
     waitlist_title: "מוכנים לשנות את המצב הכלכלי שלכם?",
     waitlist_des: "הצטרפו לאלפי משקיעים חכמים שכבר ברשימת ההמתנה",
     join: "הצטרף לרשימת ההמתנה",
@@ -199,7 +212,7 @@ const translations = {
 
     partners_title: "Trusted by leading companies",
 
-    features_title: "Transform your financial future",
+    features_title: "Turn financial chaos into control",
     features_subtitle: "Experience the power of AI-driven financial management with features designed for the modern investor",
 
     fa_title: "AI Financial Assistant",
@@ -273,6 +286,19 @@ const translations = {
 
     free_access_title: "1 Month of Full Free Access",
     free_access_description: "Try all FINERRA features for a full month at no cost. Join the waitlist now to be first in line for your free month!",
+
+    // Free trial section translations
+    free_trial_title: "1 Month of Full Free Access - What You Get?",
+    free_trial_subtitle: "Exclusive early access for a limited number of users",
+    ai_analysis_title: "AI Expense Analysis",
+    ai_analysis_desc: "Our AI will analyze all your expenses and identify hidden patterns to help you save money",
+    auto_distribution_title: "Automatic Income Distribution",
+    auto_distribution_desc: "The system will automatically distribute your income between savings, investments, and daily expenses",
+    insights_title: "Advanced Financial Insights",
+    insights_desc: "Get personalized recommendations and forecasts for your financial future",
+    limited_users: "Limited to select users",
+    early_access_text: "This is exclusive early access for a limited number of users only!",
+    get_access_cta: "Leave your email and get access",
 
     waitlist_title: "Ready to transform your finances?",
     waitlist_des: "Join thousands of smart investors who are already on the waitlist",
@@ -355,6 +381,19 @@ function setLanguage(lang) {
   document.getElementById('ai_assistant_description').innerText = t.ai_assistant_description;
   document.getElementById('free_access_title').innerText = t.free_access_title;
   document.getElementById('free_access_description').innerText = t.free_access_description;
+
+  // Free trial section translations
+  document.getElementById('free_trial_title').innerText = t.free_trial_title;
+  document.getElementById('free_trial_subtitle').innerText = t.free_trial_subtitle;
+  document.getElementById('ai_analysis_title').innerText = t.ai_analysis_title;
+  document.getElementById('ai_analysis_desc').innerText = t.ai_analysis_desc;
+  document.getElementById('auto_distribution_title').innerText = t.auto_distribution_title;
+  document.getElementById('auto_distribution_desc').innerText = t.auto_distribution_desc;
+  document.getElementById('insights_title').innerText = t.insights_title;
+  document.getElementById('insights_desc').innerText = t.insights_desc;
+  document.getElementById('limited_users').innerText = t.limited_users;
+  document.getElementById('early_access_text').innerText = t.early_access_text;
+  document.getElementById('get_access_cta').innerText = t.get_access_cta;
 
   document.getElementById('waitlist_title').innerText = t.waitlist_title;
   document.getElementById('waitlist_des').innerText = t.waitlist_des;
