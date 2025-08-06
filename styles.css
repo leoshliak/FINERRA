@@ -473,47 +473,6 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
-.trust-section {
-  background: #05070B;
-  padding: 60px 0 60px 0;
-}
-
-.trust-elements {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 40px;
-}
-
-.security-info {
-  text-align: center;
-  padding: 30px 20px;
-  background: rgba(108, 71, 255, 0.05);
-  border-radius: 12px;
-  border: 1px solid rgba(108, 71, 255, 0.1);
-}
-
-.security-icon {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.security-info h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #fff;
-}
-
-.security-info p {
-  color: #bfc6e0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
 .partner-logos {
   text-align: center;
   padding: 30px 20px;
@@ -795,6 +754,86 @@ nav a:hover {
   letter-spacing: 0.2px;
 }
 
+.some-info {
+  padding: 60px 0 60px 0;
+}
+
+.some-info h2 {
+  font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+
+.info-des {
+    color: #bfc6e0;
+    font-size: 1.3rem;
+    margin-bottom: 55px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.info-content {
+  display: flex;
+  max-width: 1200px;
+}
+
+.info-content .blocks-con {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.info-content .info-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0px 20px 0px ;
+}
+
+.info-content .info-text {
+  flex: 1;
+  padding: 10px;
+}
+
+.info-content .info-img {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.info-content .info-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.left-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.left-des {
+  line-height: 35px;
+  color: #f1f1f1;
+  margin-bottom: 1.5rem;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+}
+
+.info-content .info-img img:hover {
+  transform: scale(1.06);
+}
+
 .waitlist {
   background: #010203;
   padding: 60px 0 60px 0;
@@ -969,7 +1008,8 @@ footer {
   }
 
   /* Testimonials responsive for tablets */
-  .testimonials-title {
+  .testimonials-title,
+  .some-info h2 {
     font-size: 2.5rem;
   }
 
@@ -979,13 +1019,6 @@ footer {
 
   .testimonials-container {
     gap: 10px;
-  }
-
-  /* Trust section responsive for tablets */
-  .trust-elements {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-top: 30px;
   }
 
   .security-info,
@@ -1041,17 +1074,48 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
+  .info-content .blocks-con {
+    gap: 60px;
+}
 }
 
 @media (max-width: 1040px) {
   .testimonials-slider {
     max-width: 800px;
 }
+.info-content .blocks-con {
+  gap: 40px;
+}
+
+.left-title {
+  font-size: 2rem;
+}
+
+.left-des {
+  line-height: 33px;
+  margin-bottom: 1.5rem;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
 }
 
 @media (max-width: 940px) {
   .testimonials-slider {
     max-width: 700px;
+}
+.info-content .blocks-con {
+  gap: 20px;
+}
+.left-title {
+  font-size: 1.8rem;
+}
+
+.left-des {
+  line-height: 30px;
+  margin-bottom: 1.2rem;
+  font-size: 17px;
+  letter-spacing: 0.2px;
 }
 }
 
@@ -1196,6 +1260,34 @@ nav a.cta-nav {
   min-height: 44px;
   padding: 12px 20px;
 }
+
+.info-content .info-block {
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.info-content .info-block:nth-child(2){
+  flex-direction: column;
+}
+
+.info-content .info-text {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.left-des {
+  line-height: 30px;
+  margin-bottom: 0rem;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.info-des {
+  color: #bfc6e0;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
 }
 
 @media (max-width: 750px) {
@@ -1221,15 +1313,6 @@ nav a.cta-nav {
     width: 200px;
   }
 
-  /* Trust section mobile styles */
-  .trust-section {
-    padding: 40px 0 40px 0;
-  }
-
-  .trust-elements {
-    gap: 25px;
-    margin-top: 20px;
-  }
 
   .security-info,
   .partner-logos {
@@ -1328,7 +1411,7 @@ nav a.cta-nav {
 
   .features h2,
   .steps h2,
-  .waitlist h2 {
+  .waitlist h2, .some-info h2 {
     font-size: 2rem;
   }
 
@@ -1380,6 +1463,15 @@ nav a.cta-nav {
     min-height: 55px;
   }
 
+  .info-content .blocks-con {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .info-content .info-text {
+    padding: 0;
+  }
+
   .waitlist-form {
     flex-direction: column;
     gap: 15px;
@@ -1402,6 +1494,16 @@ nav a.cta-nav {
 
 @media (max-width: 580px) {
 
+  .left-title {
+    font-size: 1.2rem;
+  }
+  
+  .left-des {
+    line-height: 25px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
   /* Testimonials improvements for small mobile */
   .testimonials-title {
     font-size: 1.6rem;
@@ -1414,6 +1516,7 @@ nav a.cta-nav {
   .testimonial-card {
     padding: 15px 12px;
     min-height: 160px;
+    flex: 0 0 calc(100% - 30px);
   }
 
   .testimonial-content p {
@@ -1469,8 +1572,8 @@ nav a.cta-nav {
 
   .features h2,
   .steps h2,
-  .waitlist h2 {
-    font-size: 1.4rem;
+  .waitlist h2, .some-info h2 {
+    font-size: 1.55rem;
   }
 
   .container {
@@ -1525,6 +1628,10 @@ nav a.cta-nav {
     width: 100%;
   }
 
+  .testimonials-container {
+    padding: 0;
+  }
+
   .waitlist {
     padding-bottom: 20px;
   }
@@ -1538,17 +1645,18 @@ nav a.cta-nav {
   }
 
   .testimonials-slider {
-    max-width: calc(100vw - 70px);
+    max-width: calc(100vw - 50px);
   }
 
   .testimonial-card {
     padding: 12px 10px;
     min-height: 140px;
+    flex: 0 0 calc(100% - 30px);
   }
 
   .testimonial-content p {
     font-size: 0.8rem;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   .author-name {
@@ -1575,8 +1683,8 @@ nav a.cta-nav {
 
   .features h2,
   .steps h2,
-  .waitlist h2 {
-    font-size: 1.3rem;
+  .waitlist h2, .some-info h2 {
+    font-size: 1.4rem;
   }
 
   nav {
@@ -1616,17 +1724,17 @@ nav a.cta-nav {
   }
 
   .testimonials-slider {
-    max-width: calc(100vw - 60px);
+    max-width: calc(100vw - 40px);
   }
 
   .testimonial-card {
-    padding: 10px 8px;
+    padding: 10px 12px;
     min-height: 120px;
   }
 
   .testimonial-content p {
     font-size: 0.75rem;
-    line-height: 1.3;
+    line-height: 1.5;
     margin-bottom: 15px;
   }
 
@@ -1650,8 +1758,8 @@ nav a.cta-nav {
 
   .features h2,
   .steps h2,
-  .waitlist h2 {
-    font-size: 1.2rem;
+  .waitlist h2, .some-info h2 {
+    font-size: 1.3rem;
   }
 
   .section-desc {
@@ -1683,7 +1791,7 @@ nav a.cta-nav {
   }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 500px) {
   nav {
     top: -400%
   }
