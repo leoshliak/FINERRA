@@ -75,9 +75,11 @@ const translations = {
     home_nav: "בית",
     feature_nav: "תכונות", 
     how_it_works_nav: "איך זה עובד",
+    why_us: "למה אנחנו",
     testimonials_nav: "ביקורות",
     cta: "קבל גישה מוקדמת",
     badge: "גישה מוקדמת זמינה 🚀",
+    hero_free: "חודש אחד של גישה מלאה וחינמית",
     cta_main: "קבל גישה מוקדמת",
     no_highlight: "נהל את הכסף שלך כמו מקצוען",
     highlight: "בעזרת בינה מלאכותית",
@@ -184,9 +186,11 @@ const translations = {
     home_nav: "Home",
     feature_nav: "Features",
     how_it_works_nav: "How it Works",
+    why_us: "Why Us",
     testimonials_nav: "Testimonials",
     cta: "Get Early Access",
     badge: "🚀 Early Access Available",
+    hero_free: "1 Month of Full Free Access",
     cta_main: "Get Early Access",
     no_highlight: "Manage your money like a pro",
     highlight: "With AI",
@@ -300,9 +304,11 @@ function setLanguage(lang) {
   document.getElementById('home_nav').innerText = t.home_nav;
   document.getElementById('feature_nav').innerText = t.feature_nav;
   document.getElementById('how_it_works_nav').innerText = t.how_it_works_nav;
+  document.getElementById('why_us').innerText = t.why_us;
   document.getElementById('testimonials_nav').innerText = t.testimonials_nav;
   document.getElementById('cta').innerText = t.cta;
   document.getElementById('badge').innerText = t.badge;
+  document.getElementById("hero_free").innerText = t.hero_free;
   document.getElementById('cta_main').innerText = t.cta_main;
   document.getElementById('motivating_headline').innerText = t.chaos_to_control;
   document.getElementById('no_highlight').innerText = t.no_highlight;
