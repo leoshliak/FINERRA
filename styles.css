@@ -18,6 +18,17 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background-color: #5d36fd; 
+  color: #ffffff;            
+}
+
+/* For Gecko browsers (Firefox) */
+::-moz-selection {
+  background-color: #5d36fd;
+  color: #ffffff;
+}
+
 .container {
   width: 90%;
   max-width: 1400px;
@@ -364,6 +375,163 @@ nav a:hover {
   padding: 40px 0;
   text-align: center;
   overflow: hidden;
+}
+
+.free-access {
+  background: #07080d;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.free-access .container {
+  max-width: 1300px;
+}
+
+.free-access-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+/*.free-access-subtitle {
+  font-size: 1.3rem;
+  color: #9470ff;
+  margin-bottom: 50px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}*/
+
+.offer-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+.offer-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  transform: translateY(8%)
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  /*background: linear-gradient(135deg, #6c47ff, #9470ff);*/
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.feature-text h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #bfc6e0;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  width: 90%;
+}
+
+.offer-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.offer-image img {
+  width: 100%;
+  /*max-width: 400px;*/
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(1.25);
+  transition: all 0.3s ease;
+}
+
+.offer-image img:hover {
+  transform: scale(1.28);
+}
+
+.limited-offer-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(108, 71, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(108, 71, 255, 0.1);
+}
+
+.early-access-text {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.get-access-btn {
+  background: linear-gradient(135deg, #6c47ff, #9470ff);
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  box-shadow: 0 8px 25px rgba(108, 71, 255, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.get-access-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(108, 71, 255, 0.4);
+  background: linear-gradient(135deg, #5a3de6, #8660ff);
 }
 
 .partners-title {
@@ -1039,7 +1207,8 @@ footer {
 
   /* Testimonials responsive for tablets */
   .testimonials-title,
-  .some-info h2 {
+  .some-info h2,
+  .free-access-title {
     font-size: 2.5rem;
   }
 
@@ -1112,6 +1281,15 @@ footer {
   .info-content .blocks-con {
     gap: 60px;
 }
+
+  /* Free access section responsive */
+  .offer-content {
+    gap: 40px;
+  }
+
+  /*.offer-image img {
+    max-width: 350px;
+  }*/
 }
 
 @media (max-width: 1040px) {
@@ -1139,10 +1317,11 @@ footer {
     max-width: 700px;
 }
 .info-content .blocks-con {
-  gap: 20px;
+  gap: 40px;
 }
 .left-title {
   font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 .left-des {
@@ -1150,6 +1329,8 @@ footer {
   margin-bottom: 1.2rem;
   font-size: 17px;
   letter-spacing: 0.2px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 }
 
@@ -1172,7 +1353,10 @@ footer {
 
 .info-content .info-block {
   flex-direction: column-reverse;
-  gap: 30px;
+  gap: 15px;
+  padding: 0;
+  border: 1px solid #ffffff36;
+  border-radius: 10px;
 }
 
 .info-content .info-block:nth-child(2){
@@ -1181,13 +1365,13 @@ footer {
 
 .info-content .info-text {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
 .left-des {
   line-height: 30px;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
   font-size: 18px;
   letter-spacing: 0.2px;
 }
@@ -1196,6 +1380,52 @@ footer {
   color: #bfc6e0;
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+
+/* Free access section mobile */
+.offer-content {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.offer-features {
+  gap: 25px;
+}
+
+.feature-item {
+  gap: 15px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  font-size: 1.3rem;
+}
+
+.feature-text h3 {
+  font-size: 1.2rem;
+}
+
+.offer-content {
+  align-items: center;
+}
+
+.feature-item {
+  width: 95%;
+}
+
+.feature-text p {
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/*.offer-image img {
+  max-width: 300px;
+}*/
+
+.limited-offer-badge {
+  font-size: 0.8rem;
+  padding: 6px 12px;
 }
 }
 
@@ -1332,7 +1562,8 @@ footer {
 
   .features h2,
   .steps h2,
-  .waitlist h2, .some-info h2 {
+  .waitlist h2, .some-info h2,
+  .free-access-title {
     font-size: 2rem;
   }
 
@@ -1411,6 +1642,17 @@ footer {
     min-height: 44px;
     padding: 12px 18px;
   }
+
+  .get-access-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .early-access-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
 }
 
 @media (max-width: 580px) {
@@ -1493,7 +1735,8 @@ footer {
 
   .features h2,
   .steps h2,
-  .waitlist h2, .some-info h2 {
+  .waitlist h2, .some-info h2,
+  .free-access-title {
     font-size: 1.55rem;
   }
 
@@ -1604,7 +1847,8 @@ footer {
 
   .features h2,
   .steps h2,
-  .waitlist h2, .some-info h2 {
+  .waitlist h2, .some-info h2,
+  .free-access-title {
     font-size: 1.4rem;
   }
 
@@ -1679,7 +1923,8 @@ footer {
 
   .features h2,
   .steps h2,
-  .waitlist h2, .some-info h2 {
+  .waitlist h2, .some-info h2,
+  .free-access-title {
     font-size: 1.3rem;
   }
 
@@ -1704,6 +1949,11 @@ footer {
   .hero-content {
     transform: translateY(-5%);
   }
+
+    .get-access-btn {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
 }
 
 @media (max-width: 740px) {
