@@ -5,34 +5,22 @@ const toast = document.getElementById('toast');
 const closeBtn = document.querySelector('.toast-close');
 let hideTimeout;
 
-waitlistForm.addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  if(!email) return;
+const preloader = document.querySelector('[data-preload]');
 
-  const formData = new FormData(waitlistForm);
+/*window.addEventListener('load', function(){
+  preloader.classList.add('loaded');
+  document.body.classList.add('loaded');
+});*/
 
-  try {
-    const response = await fetch(waitlistForm.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
+waitlistForm.addEventListener('submit', function() {
+  // NO preventDefault — allow form to submit naturally
 
-    if (response.ok) {
-      clearTimeout(hideTimeout);
-      toast.classList.remove('hidden');
-      requestAnimationFrame(() => toast.classList.add('show'));
-      hideTimeout = setTimeout(hideToast, 3000);
-      fbq('track', 'Lead');
-      waitlistForm.reset();
-    } else {
-      alert('Oops! Something went wrong. Please try again.');
-    }
-  } catch (err) {
-    alert('Network error. Please try again later.');
-    console.error(err);
-  }
+  clearTimeout(hideTimeout);
+  toast.classList.remove('hidden');
+  requestAnimationFrame(() => toast.classList.add('show'));
+  hideTimeout = setTimeout(hideToast, 3000);
+   
+  setTimeout(() => {waitlistForm.reset()}, 1); 
 });
 
 
@@ -76,42 +64,44 @@ const translations = {
     feature_nav: "תכונות", 
     how_it_works_nav: "איך זה עובד",
     why_us: "למה אנחנו",
-    testimonials_nav: "ביקורות",
-    cta: "קבל גישה מוקדמת",
-    badge: "גישה מוקדמת זמינה 🚀",
-    hero_free: "חודש אחד של גישה מלאה וחינמית",
-    cta_main: "קבל גישה מוקדמת",
-    no_highlight: "נהל את הכסף שלך כמו מקצוען",
-    highlight: "בעזרת בינה מלאכותית",
+    testimonials_nav: "המלצות",
+    cta: "קבלו גישה מוקדמת",
+    badge: "קבלו גישה מוקדמת 🚀",
+    hero_free: "גישה מוקדמת זמינה! חודש שלם של גישה מלאה בחינם",
+    hero_title: "פינרה",
+    cta_main: "קבלו גישה מוקדמת",
+    no_highlight: "נהלו את הכסף שלכם כמו מקצוענים,",
+    highlight: "עם בינה מלאכותית",
     chaos_to_control: "נהל את הכסף שלך כמו מקצוען",
-    placeholder_email: "הזן את כתובת האימייל שלך",
+    placeholder_email: "הזינו את כתובת האימייל שלכם",
 
-    partners_title: "מהימן על ידי חברות מובילות",
+    partners_title: "בשימוש על ידי חברות מובילות",
 
-    features_title: "להפוך את הכאוס הפיננסי לשליטה",
-    features_subtitle: "התנסה בכוח של ניהול פיננסי מונע בינה מלאכותית עם פונקציות המיועדות למשקיע המודרני",
+    features_title: "הפכו כאוס פיננסי לשליטה",
+    features_subtitle: "חוו את העוצמה של ניהול פיננסי מונחה בינה מלאכותית, עם תכונות שתוכננו עבור המשקיע המודרני",
 
-    fa_title: "עוזר פיננסי מבוסס בינה מלאכותית",
-    fa_description: "קבל תובנות והמלצות אישיות המונעות על ידי בינה מלאכותית מתקדמת כדי למקסם את ההוצאות והחסכונות שלך",
+    fa_title: "עוזר פיננסי חכם",
+    fa_description: "קבלו תובנות והמלצות מותאמות אישית המבוססות על בינה מלאכותית מתקדמת, שיעזרו לכם לייעל את ההוצאות והחיסכון.",
 
-    sid_title: "חלוקה חכמה של ההכנסות",
-    sid_description: "הקצא אוטומטית את ההכנסות שלך לחסכונות, השקעות והוצאות בהתבסס על המטרות הפיננסיות שלך",
+    sid_title: "חלוקת הכנסה חכמה",
+    sid_description: "הקצו אוטומטית את ההכנסה שלכם בין חיסכון, השקעות והוצאות, בהתאם ליעדים הפיננסיים שלכם.",
 
-    gc_title: "אתגרי גיימיפיקציה",
-    gc_description: "הישאר ממוטב עם אתגרים פיננסיים מרתקים ותגמולים שהופכים את בניית העושר לכיפית וממכרת",
+    gc_title: "אתגרים פיננסיים עם משחקיות",
+    gc_description: "הישארו עם מוטיבציה בעזרת אתגרים פיננסיים מרתקים ותגמולים, שהופכים את צבירת ההון למהנה וממכרת.",
 
-    testimonials_title: "מה אומרים משתמשי הגישה המוקדמת",
-    testimonials_subtitle: "חוות דעת אמיתיות ממשתמשים שכבר חווים את כוח הבינה המלאכותית של FINERRA",
+    testimonials_title: "מה אומרים המשתמשים שכבר הצטרפו?",
+    testimonials_subtitle: "המלצות אמיתיות ממשתמשים שכבר חווים את העוצמה של פינרה:",
 
-    testimonial_1: "FINERRA שינתה לחלוטין את הדרך שבה אני מנהל את הכספים שלי. הבינה המלאכותית מזהה דפוסי הוצאה שלא שמתי לב אליהם.",
+    testimonial_1: "פינרה שינתה לחלוטין את הדרך בה אני מנהל את הכסף שלי. המערכת זיהתה הרגלים שלא שמתי לב אליהם.",
+
     author_1_name: "דני כהן",
     author_1_title: "יזם טכנולוגיה",
 
-    testimonial_2: "סוף סוף יש לי שליטה מלאה על התקציב שלי. המערכת מציעה המלצות מדויקות שחוסכות לי אלפי שקלים בחודש.",
+    testimonial_2: "סוף סוף יש לי שליטה מלאה על התקציב. ההמלצות המדויקות חוסכות לי אלפי שקלים.",
     author_2_name: "מיכל לוי",
     author_2_title: "מנהלת שיווק",
 
-    testimonial_3: "האפליקציה הפכה את ניהול הכספים לפשוט ומהנה. הגיימיפיקציה מעודדת אותי להמשיך לחסוך.",
+    testimonial_3: "האפליקציה הופכת את כל התהליך למהנה. האתגרים עוזרים לי להישאר עם מוטיבציה.",
     author_3_name: "אבי רוזן",
     author_3_title: "מהנדס תוכנה",
 
@@ -119,69 +109,69 @@ const translations = {
     author_4_name: "שרה גולד",
     author_4_title: "רופאה",
 
-    testimonial_5: "הצלחתי לחסוך 30% יותר מהרגיל הודות להמלצות החכמות של המערכת. פשוט מדהים!",
-    author_5_name: "יוסי אברהם",
+    testimonial_5: "חסכתי 30% יותר מהרגיל בזכות ההמלצות החכמות. פשוט מדהים!",
+    author_5_name: "ג'ו אברהם",
     author_5_title: "עורך דין",
 
-    testimonial_6: "המערכת עזרה לי להבין לאן הולך הכסף שלי ואיך לנהל אותו בצורה חכמה יותר.",
+    testimonial_6: "סוף סוף אני מבינה לאן הולך הכסף שלי ואיך להתנהל נכון.",
     author_6_name: "רונית שמיר",
     author_6_title: "מעצבת גרפית",
 
-    testimonial_7: "הממשק פשוט ונוח, והתכונות החכמות עוזרות לי לקבל החלטות פיננסיות מושכלות.",
+    testimonial_7: "ממשק פשוט ונוח, והכלים החכמים עוזרים לי לקבל החלטות טובות.",
     author_7_name: "עמית בן דוד",
     author_7_title: "אדריכל",
 
-    testimonial_8: "לראשונה בחיים אני מרגישה בטוחה לגבי העתיד הפיננסי שלי. תודה FINERRA!",
+    testimonial_8: "בפעם הראשונה בחיי אני רגועה לגבי העתיד הכלכלי שלי. תודה פינרה!",
     author_8_name: "נועה כץ",
     author_8_title: "מורה",
 
-    testimonial_9: "המערכת לא רק עוזרת לי לחסוך, אלא גם מלמדת אותי איך להשקיע בחכמה.",
+    testimonial_9: "המערכת לא רק עוזרת לי לחסוך, היא גם מלמדת אותי איך להשקיע נכון.",
     author_9_name: "גיל מורן",
     author_9_title: "יועץ עסקי",
 
-    steps_title: "צעדים פשוטים לחופש כלכלי",
-    steps_des: "התחל תוך דקות, לא שעות",
+    steps_title: "צעדים פשוטים לחופש פיננסי",
+    steps_des: "התחילו תוך דקות, לא שעות",
 
-    step1_title: "חבר את החשבונות שלך",
-    step1_des: "קישור מאובטח של חשבונות הבנק וכרטיסי האשראי בכמה לחיצות בלבד",
+    step1_title: "חברו את החשבונות שלכם",
+    step1_des: "קשרו בצורה מאובטחת את חשבונות הבנק וכרטיסי האשראי שלכם בכמה קליקים.",
 
-    step2_title: "קבע את המטרות שלך",
-    step2_des: "ספר לבינה המלאכותית שלנו על היעדים הפיננסיים שלך ותן לה ליצור תוכנית מותאמת אישית",
+    step2_title: "הגדירו את היעדים שלכם",
+    step2_des: "ספרו למערכת על המטרות הפיננסיות שלכם ותנו לה ליצור עבורכם תכנית מותאמת אישית.",
 
-    step3_title: "צפה בעושר שלך גדל",
-    step3_des: "תשב בנוח ותן ל-FINERRA לאופטימיזציה אוטומטית של הכספים שלך",
+    step3_title: "צפו בעושר שלכם גדל",
+    step3_des: "שבו בנחת ותנו לפינרה לייעל את הכספים שלכם בצורה חכמה ואוטומטית.",
 
-    info_title: "למה לבחור בנו",
-    info_subtitle: "גלה מה הופך את FINERRA לבחירה הטובה ביותר לניהול הכספים שלך",
+    info_title: "למה לבחור בנו?",
+    info_subtitle: "גלו מה הופך את פינרה לבחירה הנכונה ביותר לניהול הכספים שלכם",
 
     security_title: "אבטחת מידע מתקדמת",
-    security_description: "הנתונים הפיננסיים שלך מוגנים בהצפנה ברמה בנקאית ובטכנולוגיות אבטחה מתקדמות. אנחנו מבטיחים שהמידע שלך יישאר פרטי ומאובטח תמיד.",
+    security_description: "הנתונים שלכם מוגנים באמצעות הצפנה ברמה בנקאית וטכנולוגיות אבטחה מתקדמות. הפרטיות שלכם היא בראש סדר העדיפויות.",
 
-    ai_assistant_title: "עוזר פיננסי מבוסס בינה מלאכותית",
-    ai_assistant_description: "הבינה המלאכותית שלנו לומדת את ההרגלים הפיננסיים שלך ומספקת המלצות מותאמות אישית. קבל תובנות חכמות שיעזרו לך לחסוך יותר ולהשקיע בחכמה.",
+    ai_assistant_title: "עוזר פיננסי אישי מבוסס בינה מלאכותית",
+    ai_assistant_description: "המערכת לומדת את ההרגלים שלכם ומספקת תובנות חכמות שיעזרו לכם לחסוך יותר ולהשקיע בצורה נבונה.",
 
-    free_access_title: "חודש מלא של גישה חינמית",
-    free_access_description: "נסה את כל התכונות של FINERRA במשך חודש שלם ללא עלות. הצטרף לרשימת ההמתנה עכשיו כדי להיות הראשון לקבל גישה לחודש החינמי שלך!",
+    free_access_title: "חודש ניסיון חינם",
+    free_access_description: "נסו את כל התכונות של פינרה בחינם למשך חודש שלם. הצטרפו לרשימת ההמתנה והבטיחו את מקומכם!",
 
     // Free trial section translations
-    free_trial_title: "חודש מלא של גישה חינמית - מה תקבל?",
-    free_trial_subtitle: "גישה מוקדמת בלעדית למספר מוגבל של משתמשים",
-    ai_analysis_title: "ניתוח AI של הוצאות",
-    ai_analysis_desc: "הבינה המלאכותית שלנו תנתח את כל ההוצאות שלך ותזהה דפוסים חבויים שיעזרו לך לחסוך",
-    auto_distribution_title: "חלוקה אוטומטית של הכנסות",
-    auto_distribution_desc: "המערכת תחלק אוטומטית את ההכנסות שלך בין חסכונות, השקעות והוצאות יומיות",
+    free_trial_title: "מה מקבלים עם חודש שלם של גישה בחינם?",
+    free_trial_subtitle: "גישה מוקדמת בלעדית למספר משתמשים מוגבל",
+    ai_analysis_title: "ניתוח הוצאות חכם",
+    ai_analysis_desc: "הבינה המלאכותית שלנו תנתח את כל ההוצאות שלכם, תזהה דפוסים נסתרים ותעזור לכם לחסוך יותר כסף.",
+    auto_distribution_title: "חלוקת הכנסה אוטומטית",
+    auto_distribution_desc: "המערכת תחלק אוטומטית את ההכנסה בין חיסכון, השקעות והוצאות יומיות.",
     insights_title: "תובנות פיננסיות מתקדמות",
-    insights_desc: "קבל המלצות מותאמות אישית ותחזיות לעתיד הפיננסי שלך",
-    limited_users: "מוגבל למספר משתמשים",
-    early_access_text: "זוהי גישה מוקדמת בלעדית למספר מוגבל של משתמשים בלבד!",
-    get_access_cta: "השאר את האימייל שלך וקבל גישה",
+    insights_desc: "קבלו תחזיות והמלצות מותאמות אישית לעתיד הכלכלי שלכם.",
+    limited_users: "מוגבל למשתמשים נבחרים",
+    early_access_text: "גישה זו מוגבלת למשתמשים נבחרים בלבד!",
+    get_access_cta: "השאירו את כתובת האימייל שלכם וקבלו גישה",
 
     waitlist_title: "מוכנים לשנות את המצב הכלכלי שלכם?",
-    waitlist_des: "הצטרפו לאלפי משקיעים חכמים שכבר ברשימת ההמתנה",
-    join: "הצטרף לרשימת ההמתנה",
+    waitlist_des: "הצטרפו לאלפי אנשים שכבר ברשימת ההמתנה",
+    join: "להצטרף",
     form_text: "הצטרפו לתנועת הכסף החכם. קבלו גישה מוקדמת בלעדית לעוזר הפיננסי מבוסס הבינה המלאכותית שישנה את הדרך שבה אתם מנהלים את העושר שלכם.",
 
-    footer_con: "נוצר עם ♥ מאת FINERRA",
+    footer_con: "נוצר באהבה ♥ על ידי פינרה",
 
     succes: "הצלחה!",
     succes_des: "תודה שהצטרפת לרשימת הגישה המוקדמת שלנו. נחזור אליך בקרוב!",
@@ -204,6 +194,7 @@ const translations = {
     cta: "Get Early Access",
     badge: "🚀 Early Access Available",
     hero_free: "1 Month of Full Free Access",
+    hero_title: "FINERRA",
     cta_main: "Get Early Access",
     no_highlight: "Manage your money like a pro",
     highlight: "With AI",
@@ -224,7 +215,7 @@ const translations = {
     gc_title: "Gamified Challenges",
     gc_description: "Stay motivated with engaging financial challenges and rewards that make building wealth fun and addictive",
 
-    testimonials_title: "What Early Access Users Say",
+    testimonials_title: "What Early Access Users Say?",
     testimonials_subtitle: "Real testimonials from users already experiencing the power of FINERRA's AI",
 
     testimonial_1: "FINERRA completely changed how I manage my finances. The AI identifies spending patterns I never noticed before.",
@@ -275,7 +266,7 @@ const translations = {
     step3_title: "Watch Your Wealth Grow",
     step3_des: "Sit back and let FINERRA optimize your finances automatically",
 
-    info_title: "Why Choose Us",
+    info_title: "Why Choose Us?",
     info_subtitle: "Discover what makes FINERRA the best choice for managing your finances",
 
     security_title: "Advanced Data Security",
@@ -326,7 +317,8 @@ function setLanguage(lang) {
   if (!t) return;
 
   localStorage.setItem('selectedLanguage', lang);
-
+  
+  document.getElementById("logo").innerText = t.hero_title;
   document.getElementById('home_nav').innerText = t.home_nav;
   document.getElementById('feature_nav').innerText = t.feature_nav;
   document.getElementById('how_it_works_nav').innerText = t.how_it_works_nav;
@@ -335,6 +327,7 @@ function setLanguage(lang) {
   document.getElementById('cta').innerText = t.cta;
   document.getElementById('badge').innerText = t.badge;
   document.getElementById("hero_free").innerText = t.hero_free;
+  document.getElementById("hero_title").innerText = t.hero_title
   document.getElementById('cta_main').innerText = t.cta_main;
   document.getElementById('motivating_headline').innerText = t.chaos_to_control;
   document.getElementById('no_highlight').innerText = t.no_highlight;
@@ -400,7 +393,7 @@ function setLanguage(lang) {
   document.getElementById('join').innerText = t.join;
   document.getElementById('form_text').innerText = t.form_text;
   if(lang === 'he') {
-  document.getElementById('footer_con').innerHTML = `נוצר עם <span class='heart'>♥</span> מאת FINERRA`
+  document.getElementById('footer_con').innerHTML = `נוצר באהבה <span class='heart'>♥</span> על ידי פינרה`
   } else if(lang === 'en'){
     document.getElementById('footer_con').innerHTML = `Made with <span class='heart'>♥</span> by FINERRA`
   }
